@@ -1,0 +1,12 @@
+Install Vagrant Tool:
+--------------------------------------------------------
+(This two commands can helps to install the Vagrant Tool in any of the mac)
+
+brew tap hashicorp/tap
+brew install hashicorp/tap/hashicorp-vagrant
+
+
+
+Vagrant Tool box helps to get any kind of images from the " https://app.vagrantup.com/boxes/search ".
+
+we can use the images to create the OS and also we use this in the Vagrantfile. 
