@@ -1,0 +1,30 @@
+# Hosts
+----------------------------------------------
+
+[webservers]
+192.168.33.10
+
+[dbservers]
+192.168.33.11
+
+
+
+
+
+# Plybooks.yml
+-----------------------------------------------
+
+---
+- name: Install Apache web server
+  hosts: dbservers
+  become: true
+  tasks:
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: latest
+    - name: Start Apache
+      service:
+	name: httpd
+	state: started
+	enabled: true
